@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Weather_API" customModuleProvider="target">
+            <connections>
+                <outlet property="place_label" destination="COY-7Z-yj0" id="p7M-QO-F9I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weatherDataTableView" destination="X6Y-Tp-cCr" id="vC1-hy-JAo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-h5-avA">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="36hr 天氣資訊預報" id="m35-k4-Qxv">
+                            <barButtonItem key="rightBarButtonItem" title="縣市查詢" id="4Nl-eI-QwV">
+                                <connections>
+                                    <action selector="change_place:" destination="-1" id="gma-rK-e6G"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地區名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COY-7Z-yj0">
+                    <rect key="frame" x="161.5" y="108" width="91" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X6Y-Tp-cCr">
+                    <rect key="frame" x="0.0" y="152" width="414" height="744"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CO2-h5-avA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0c2-A4-klp"/>
+                <constraint firstItem="CO2-h5-avA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fmm-QK-2Bv"/>
+                <constraint firstItem="X6Y-Tp-cCr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LJE-lN-UPC"/>
+                <constraint firstItem="COY-7Z-yj0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VaU-4x-fth"/>
+                <constraint firstItem="X6Y-Tp-cCr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a8c-c7-jAw"/>
+                <constraint firstItem="CO2-h5-avA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dYH-8B-Quh"/>
+                <constraint firstItem="X6Y-Tp-cCr" firstAttribute="top" secondItem="COY-7Z-yj0" secondAttribute="bottom" constant="8" symbolic="YES" id="oID-Yl-Cnc"/>
+                <constraint firstItem="COY-7Z-yj0" firstAttribute="top" secondItem="CO2-h5-avA" secondAttribute="bottom" constant="20" id="pWP-JL-sgw"/>
+                <constraint firstAttribute="bottom" secondItem="X6Y-Tp-cCr" secondAttribute="bottom" id="zn4-Ne-HgJ"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

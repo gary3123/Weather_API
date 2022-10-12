@@ -7,17 +7,17 @@
 
 import UIKit
 
-class place_cell: UITableViewCell {
-
+class PlaceTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var place_label: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
